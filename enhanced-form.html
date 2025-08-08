@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced HTML5 Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+    }
+    fieldset {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    table, th, td {
+      border: 1px solid #333;
+      border-collapse: collapse;
+      padding: 0.5rem;
+    }
+    label {
+      display: block;
+      margin-top: 0.5rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      max-width: 400px;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Week 2 Assignment: Enhanced HTML5 Form</h1>
+    <p>This page demonstrates advanced HTML5 features including structured content and an accessible form.</p>
+  </header>
+
+  <main>
+    <!-- Section 1: Lists -->
+    <section>
+      <h2>Top 3 Web Development Tools</h2>
+      <ul>
+        <li>Visual Studio Code</li>
+        <li>GitHub</li>
+        <li>Chrome DevTools</li>
+      </ul>
+    </section>
+
+    <!-- Section 2: Table -->
+    <section>
+      <h2>Popular HTML5 Input Types</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>email</td>
+            <td>Validates email format automatically</td>
+          </tr>
+          <tr>
+            <td>tel</td>
+            <td>Used for phone numbers with custom patterns</td>
+          </tr>
+          <tr>
+            <td>date</td>
+            <td>Provides a calendar picker</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 3: Media -->
+    <section>
+      <h2>Video Tutorial</h2>
+      <video width="400" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Section 4: Form -->
+    <section>
+      <h2>Registration Form</h2>
+      <form action="#" method="post" novalidate>
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="e.g. Jane Doe" required autocomplete="name" />
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+
+          <label for="phone">Phone Number (Kenya):</label>
+          <input type="tel" id="phone" name="phone" placeholder="07XX123456" pattern="^07\d{8}$" required />
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required />
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Details</legend>
+
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" minlength="4" placeholder="At least 4 characters" required />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" minlength="6" required 
+            pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}" 
+            placeholder="Min 6 chars, include a number" />
+
+          <label for="bio">Short Bio:</label>
+          <textarea id="bio" name="bio" rows="3" placeholder="Tell us something about yourself..." autocomplete="on"></textarea>
+
+          <label>
+            <input type="checkbox" name="terms" required />
+            I agree to the terms and conditions
+          </label>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Read-Only Info</legend>
+          <label for="ref">Referral Code (readonly):</label>
+          <input type="text" id="ref" name="ref" value="KENYA2025" readonly />
+        </fieldset>
+
+        <button type="submit">Submit Form</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Enhanced HTML5 Form Project</p>
+  </footer>
+
+</body>
+</html>
